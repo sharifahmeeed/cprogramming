@@ -1,0 +1,32 @@
+/*const and #define is important here
+1. Have to initialize constant at the time of declaration and it can't be change
+
+2. const may be garbase if we don't declare it first
+
+3. #define is a preprocessor directive. Things defined by #define are replaced 
+by the preprocessor before compilation begins. 
+
+4. const variables are actual variables like other normal variables.
+
+5. In general, const is a better option if we have a choice. There are situations
+when #define cannot be replaced by const. For example, #define can take parameters
+#define can also be used to replace some text in a program with another text. */
+
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3
+
+int main() {
+    const int x = 5 ;
+    double y = 3.0;
+//    x = y; /// calculate the right side and store it in the left side
+    y = PI;
+    printf("x= %d\n",x);
+    printf("y= %lf\n %d\n",y, sizeof(PI));
+
+
+    /// Address of a variable
+    printf("the address of y in memory is: %p ",&y); /// use '&' to get the address of a variable
+
+    return 0;
+}
