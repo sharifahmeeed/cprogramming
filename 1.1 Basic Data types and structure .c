@@ -1,3 +1,10 @@
+\*Look the boolian parts and char parts here very carefully 
+1. Char number can be converted to char 
+2. Except 0 all of number will be consider in boolean
+3. When we use stdbool.h then true and false can be considered as number
+4. char name[] define as the size equal to initialization not unlimited size of char
+5. Size of interger calculations */ 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -55,7 +62,7 @@ int main() {
     printf("using keywords b=%d\n\n", b);
 
     char name[] = "Ali Badran"; /// group of characters
-    printf("%s\n", name);
+    printf("%s\nsize: %d /n", name, sizeof(name));
 
 
     /// how to know how much a variable can hold
