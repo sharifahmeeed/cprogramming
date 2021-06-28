@@ -3,7 +3,8 @@
 2. Except 0 all of number will be consider in boolean
 3. When we use stdbool.h then true and false can be considered as number
 4. char name[] define as the size equal to initialization not unlimited size of char
-5. Size of interger calculations */ 
+5. Size of interger calculations
+6. There is no type called "String" in C */ 
 
 #include <stdio.h>
 #include <stdlib.h>
