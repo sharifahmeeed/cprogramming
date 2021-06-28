@@ -4,6 +4,10 @@
 because point can't be portion of integer
 3. This problem can be solved with fflush(stdin)
 4. When you are using scanf or prinf be careful about %d or %lf type
+5. scanf(" %c",&c);  // space between these important so it can be 
+substitute of fflush(stdin).
+6. In the case of %c we must put space 
+7. for string we can use name instead of name[] and use %s
  */
 
 #include <stdio.h>
@@ -16,16 +20,22 @@ int main() {
     char name[50];
 
 
-    scanf("%d %lf",&x,&y);
+    scanf("%d %lf",&x,&y); // this can't be solved with space because dot is not accepted in int
     printf("x=%d, y=%lf \n",x,y);
 
      // this problem can be solved with fflush
     scanf("%d",&x);
     fflush(stdin);
     scanf("%lf",&y);
-    printf("x=%d, y=%lf",x,y);
+    printf("x=%d, y=%lf \n",x,y);
     // end fflush(stdin)
 
+    // fflush(stdin) for character input with %c
+    scanf("%lf",&y);
+    fflush(stdin);
+    scanf(" %c",&c);  // space between these important so it can be substitute of fflush(stdin)
+    printf("y=%lf, c=%c \n",y,c);
+    // end fflush(stdin)
 
     scanf("%s", name);
 
