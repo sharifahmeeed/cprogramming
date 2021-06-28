@@ -1,20 +1,31 @@
 /*
 1. For long integer or double in scan use LF in small
 2. If we put a 4.5 at a time then first one will be 4= x and 0.5 =y
-because point can't be portion of integer 
+because point can't be portion of integer
+3. This problem can be solved with fflush(stdin)
+4. When you are using scanf or prinf be careful about %d or %lf type
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 int main() {
-    int x = 0;
+    int x=0;
     double y = 0;
     char c = 0;
     char name[50];
 
+
     scanf("%d %lf",&x,&y);
+    printf("x=%d, y=%lf \n",x,y);
+
+     // this problem can be solved with fflush
+    scanf("%d",&x);
+    fflush(stdin);
+    scanf("%lf",&y);
     printf("x=%d, y=%lf",x,y);
+    // end fflush(stdin)
+
 
     scanf("%s", name);
 
