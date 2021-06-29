@@ -1,9 +1,9 @@
 /*
 1. printf((x > y) ? "x>y" : "y>=x"); instead of if statement and 
   int  max = (x>y)? x:y;
-2. switch control flow
-
+2. switch control flow and colon of switch at the end
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -35,9 +35,7 @@ int main() {
         break;
     default:
         printf("None");  //No need break here due
-
-
-        }
+        };
 
 
     return 0;
