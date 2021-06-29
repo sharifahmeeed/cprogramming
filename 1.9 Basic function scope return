@@ -1,0 +1,49 @@
+/*
+1. Scope means global variable or local variable
+2.if both age and function type are double than double will be return and anything
+after return will not be executed return 2/3; or return 2.0/3; can be returned
+3. function type can be void is there is no return or can be int, double or char
+ 
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+double getAge(){
+    double age=0;
+    scanf("%lf ",&age);
+    return age; // if both age and function type are double than double will be return 
+}
+
+void byReference (int *x) {
+    (*x)++;
+}
+
+int main()
+{   
+    ///getAge functions 
+    double age =getAge();
+    printf("age=%d", age);// these age are different local 
+    
+    
+    
+    
+    /// star scope example for global and local variable
+    int num = 100;
+    {//we will use same name here
+        printf("num of global will print here: %d \n", num); // as there is no local init before this
+        int num = 3;
+        printf("num of local will print here: %d \n\n\n", num); // as local initiated before this statement
+    }
+/// end scope example for global and local variable
+
+
+    /** pass by reference (pass the address) **/
+        int y = 3;
+        printf("y before call= %d\n", y);
+        byReference(&y);
+        printf("y after call= %d\n", y);
+
+
+
+    return 0;
+}
