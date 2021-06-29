@@ -1,0 +1,44 @@
+/*
+1. printf((x > y) ? "x>y" : "y>=x"); instead of if statement and 
+  int  max = (x>y)? x:y;
+2. switch control flow
+
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int x = 8;
+    int y = 7;
+
+    int  max = (x>y)? x:y;
+    printf("%d \n ", max);
+
+    printf((x > y) ? "x>y" : "y>=x");
+//    if (x > y)
+//        max = x;
+//    else
+//        max = y;
+
+
+
+    int z=0;
+    scanf("%d",&z);
+
+    switch(z) {
+    case 11:
+        printf("11");
+        break;
+    case 12:
+        printf("12");
+        break;
+    default:
+        printf("None");  //No need break here due
+
+
+        }
+
+
+    return 0;
+}
