@@ -1,3 +1,4 @@
+
 /**
  1. Structure to declare multiple type of data and we can't initialize it here when
  it is declared
@@ -29,6 +30,14 @@ int main() {
     p2.age = 30;
     strcpy(p2.name, "p2 name");
     puts(p2.name);
+    
+    ///--------struct declaration with element --------------------------------------------
+    struct {
+        char namm[10];
+        double agg;
+    }p11, p22;
+    ///-----------------------------------
+    
 
     return 0;
 }
