@@ -1,0 +1,78 @@
+/**
+ 1. structure assignment can be done with p1=p2( So we can assign struct normal )
+ 2. comparison NOT in structure with ==
+ 3. Size of the struct may be greater than the summation of element size
+ 4. typedef uses and declaration
+ 5. putc for putting character and puts for string
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main() {
+   /// typedef start--------------------------------------------------------
+
+   typedef int hello; // hello is similar to int type
+   hello x;  // here x is an interger
+
+   //........................................
+   typedef struct Persone persone;
+   //................................
+
+   typedef struct Persone{ // we can remove this Persone
+        char namee[10];
+        double agee;
+    } persone;
+
+    persone pe1;
+    //........................................
+
+
+    typedef struct {
+        char name[10];
+        int age;
+    }person;
+
+    person p1 = {.age = 20,.name = "Ali"};   // we can initialize like this in short 
+    printf("name: %s, age: %d \n\n", p1.name, p1.age);
+
+    /// typedef end-----------------------------------------------------------
+
+
+
+    /// struct assignment and comparison start---------------------------------
+
+    struct PERson{
+        char snam [10];  // we can't assign any value here
+        double sage;
+    };
+
+    struct PERson ps1, ps2;  // delcare a variable name p1 of struct PERson
+    ps1.sage=20;
+
+    strcpy(ps1.snam, "Ps1 Name"); // for string copy we have to use strcpy
+
+    ps2=ps1; // we can assign struct  like this but we caNOT compare with ==
+    puts(ps2.snam);  // putc for putting character and puts for string
+
+    //printf("%d", ps1 == ps2); // it is not acceptable to compare with == for struct
+
+
+
+    /// struct assignment and comparison end-----------------------------------------------
+
+
+    /// sizeof start.......................................
+
+    printf("\nSize of stuct fist element: %d", sizeof(ps1.snam));
+    printf("\nSize of stuct fist element: %d", sizeof(ps1.sage));
+    printf("\nSize of stuct Sum of elements: %d", sizeof(ps1.snam)+sizeof(ps1.sage)); //18BYTE   // this one and total size will be different
+    printf("\n\nSize of stuct whole: %d\n", sizeof(ps1)); //24BYTE
+
+    /// sizeof END.......................................
+
+
+    return 0;
+}
