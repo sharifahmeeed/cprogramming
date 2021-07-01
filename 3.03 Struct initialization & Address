@@ -1,5 +1,7 @@
 /**
  1. Initialize stuct value with serial and without serial 
+ 2. Address of the structure will be first element address
+ like array whatever that is.
  **/
  
 #include <stdio.h>
@@ -19,7 +21,7 @@ int main() {
     
 
     typedef struct {
-        char name[10];
+        char name[10];   // address of the structure will be the first element of the struct 
         int age; 
     }person;
 
