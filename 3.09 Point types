@@ -1,0 +1,16 @@
+/*
+1. Pointer type and variable type must be same otherwise there will be garbage value
+2. for printing we use %p for pointer
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num = 7;
+    double *p = &num;
+
+    printf("%p %d", &num, *p);
+
+    return 0;
+}
