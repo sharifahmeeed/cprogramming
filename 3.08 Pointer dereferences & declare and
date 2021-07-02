@@ -1,0 +1,22 @@
+/*
+1. Declaration * and dereferences pointer are different
+2. every items should be declare separately of pointer int *p2, *p3;
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void inc( int *p ) { /// p ---> num in the main
+    (*p)++;        // this * is to dereferences
+}
+int main() {
+    int num = 0;
+    int *p = &num; /// p ---> num   // pointer
+
+    inc(p);
+    printf("%d", num);
+
+    int *p2, *p3;  // we have to put * differently
+    return 0;
+}
