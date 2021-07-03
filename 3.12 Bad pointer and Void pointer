@@ -1,0 +1,19 @@
+/*
+1. without initialize pointer dereferencing point will crush program
+
+2. While void pointer is used then casting is must  
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num = 6;
+
+    void *p = &num; // it can be any pointer whatever user wants 
+
+    printf("%d", *((int *) p)); // casting void to integer 
+
+    return 0;
+}
