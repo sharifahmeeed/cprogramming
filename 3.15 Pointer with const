@@ -1,0 +1,47 @@
+/*
+1. Pass by reference prevent from copying data that is time saving
+it will make program faster
+
+2. cont can make things permanent to prevent mistaken edit of pointer
+
+3. By this we are saving our time and protecting out program
+
+4. Beginning const means pointee can't be change and last const means p can't be change
+
+
+5. we can change num normally and we can't change with can't be change with pointer *p */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    char name[10];
+    double age;
+}person;
+
+
+void printPerson(const person *p) { /// p ---> p1 is safe and can't change
+    printf("name: %s, age: %lf", p->name, p->age);
+
+    // p->age = 19 ; // it will make error to the code cause we can't change
+}
+
+
+
+int main() {
+//    person p1 = {"Ali", 20};
+//    printPerson(&p1); /// 100
+
+    /** const and pointers **/
+    int num = 7;
+    int i = 9;
+
+    const int * const p = &num; // both are protected 
+    num = 8;          // we can change num normally and we can't change with
+                      // can't be change with pointer *p 
+    printf("%d", num);
+
+
+    return 0;
+}
