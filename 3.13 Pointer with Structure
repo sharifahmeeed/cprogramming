@@ -1,0 +1,28 @@
+/*
+1.printf("%lf\n",(*p).age); // printf("%lf\n",*p.age); without paren it will error
+because first paren will make this act like a (dereferencing) variable
+
+2. (*p).age can be defined a p->age this is only for pointer struct 
+*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct {
+    char name[10];
+    double age;
+}person;
+
+int main() {
+
+    person p1;
+    p1.age = 20;
+    person *p = &p1; /// for struct pointer type will be declare as struct type jsut like int *p
+
+    printf("%lf\n",(*p).age); // printf("%lf\n",*p.age);
+    printf("%lf", p->age); //
+
+    return 0;
+}
