@@ -1,0 +1,31 @@
+/*
+1. *p is called dereference to the pointer 
+2. for string we can use for(; *p != '\0' ; p)  // we can use  for(; *p <= name[2] ; p) also
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int nums[] = {1,2,3,4,5};
+    printf("Compare pointer position(Binary output): %d\n\n", &nums[1] < &nums[2]);
+
+    int *q=&nums;
+
+    for(; q<= &nums[4];)
+        printf("%d ",*q++);
+     printf("\n");
+
+
+
+    char name[] = "Ali";
+    char *p = name;
+
+
+    for(; *p != '\0' ; p)  // we can use  for(; *p <= name[2] ; p) also  
+        printf("%c", *p++);
+
+    printf("\n%d", *p == '\0');  // we are verifying that last element is '\n'
+    return 0;
+}
