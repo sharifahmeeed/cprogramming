@@ -1,0 +1,71 @@
+/*
+1. Pointer+ 1 should be size adding (multiplying will size
+
+ 2. Default name without paren means the address of the first element
+ it can be with or without & sign
+
+ 3. First element to second element we have to add 4 bytes to previous address
+
+ 4. normal adding 1 to the first element means adding 1 int size( 4B) or double (8B)
+
+
+ 5. Can't modiy array pointer and that's why we put this to an another pointer
+
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int nums[] = {1,2,3,4,5}; /// 100, 104, 108, 112, 116 -> 116 - 100 = 16/4 = 4+1 = 5 size adding
+    printf("%d\n",*nums);    // this means the first element address
+
+    char name[]= "Ali";
+    printf("%c\n",*name);  // Indicate first element of char name
+
+
+    /// address of the pointer element
+    printf("%d\n", nums);
+    printf("%d\n", &nums); // common name with or without & is same meaning of address
+
+    /// This address will add 4 bye for each because integer takes 4 bytes
+    printf("%d\n", &nums[1]);
+    printf("%d\n", &nums[2]);
+    printf("%d\n", &nums[3]);
+    printf("%d\n", &nums[4]);
+
+
+    printf("%d\n", nums+1);  // this is name as the printf("%d\n", &nums[1]);
+    printf("%d\n", nums+2);  //  printf("%d\n", &nums[2]);
+    printf("%d\n", nums+3);  //printf("%d\n", &nums[3]);
+    printf("%d\n", nums+4);  //printf("%d\n", &nums[4]);
+
+
+   /// Changing pointer and storing as we can't change array pointer directly 
+ 
+   int *p=&nums;  // as we can't change nums address
+   printf("*++p: %d\n", *++p);
+   printf("*p++: %d\n", *p++);
+   printf("*p++: %d\n", *p++);   // we have to put this address to a pointer for self increment we chang't cahgn enumbs
+
+
+
+
+
+    printf("%d", &nums[4] - nums + 1); // this will be to
+
+
+    int i1 = 4;
+    int *p1 = &i1;
+
+    int i2 = 5;
+    int *p2 = &i2;
+
+    /// these are not valid
+
+ ///   printf("%d", p1 + p2);  // not valid
+///    printf("%d", p1 + 0.2);  // not valid
+  ///  printf("%d", p1 * p2);
+///    printf("%d", p1 / p2);
+    return 0;
+}
