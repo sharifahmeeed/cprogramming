@@ -11,6 +11,7 @@
 
  5. Can't modiy array pointer and that's why we put this to an another pointer
 
+ 6.   printf("%d", &nums[4] - nums + 1); -> 116 - 100 = 16/4 => 4+1 this operation automatically divide then add 1 
  */
 
 #include <stdio.h>
@@ -41,8 +42,8 @@ int main() {
     printf("%d\n", nums+4);  //printf("%d\n", &nums[4]);
 
 
-   /// Changing pointer and storing as we can't change array pointer directly 
- 
+   /// Changing pointer and storing as we can't change array pointer directly
+
    int *p=&nums;  // as we can't change nums address
    printf("*++p: %d\n", *++p);
    printf("*p++: %d\n", *p++);
@@ -52,7 +53,7 @@ int main() {
 
 
 
-    printf("%d", &nums[4] - nums + 1); // this will be to
+    printf("&nums[4] - nums + 1: %d", &nums[4] - nums + 1); /// 100, 104, 108, 112, 116 -> 116 - 100 = 16/4 = 4+1 = 5 size adding
 
 
     int i1 = 4;
