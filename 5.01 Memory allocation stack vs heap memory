@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    /**
+    • Local Memory and locals:
+        - Most common variables are "local variables"
+
+        - In a function, all the local variables and parameters taken
+          are called its "local storage" or "locals"
+
+        - example: such as num and result in here:
+
+        int square(int num) {
+            int result;
+            result = num * num;
+            return result;
+        }
+
+        - The lifetime of these variables is related to the function where they were declared:
+            - When the function runs, the local variables are allocated in the memory -> They Exist
+            - When the function exits, its locals are deallocated -> Destroyed
+
+        - Our memory has a "Stack" and a "Heap" part
+            Stack:
+                - Automatic.
+                - Variables allocated automatically on function call.
+                - Variables deallocated automatically when a function exits.
+                - Programmer has less control and less responsibility.
+
+            Heap:
+                - Explicit (manual) request of allocation of memory.
+                - Explicit request of deallocation.
+                - Possible to build a data structure in memory, and return that data structure
+                  to the caller.
+                - Programmer controls exactly when memory is allocated and deallocated.
+                - Programmer gets more control and greater responsibility.
+
+        - The local variables are allocated in the Stack
+
+        - Dynamically allocated variables are in the Heap
+    **/
+    return 0;
+}
