@@ -1,0 +1,29 @@
+/**
+    • each pointer points to one string
+    • follow the string through the pointer
+    • go to the next string using one for-loop
+    • because strcpy, strcmp, strlen all expect pointers, we can use these by
+    passing an array element (since each array element is a pointer to a string)
+
+   without pointer initialization shows unexpected error
+
+    **/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+   //char *string = "Dont use this type"; this creates problem and this problem is solved by dynamic allocation
+
+    char *names[2] = { "name1" , "name2"}; /// we can not edit pointer string can't edit
+    //gets(names[0]); // will show error
+
+    for(int i = 0; i < 1; i++)
+        printf("%d\n", strcmp(names[i], "hello"));
+
+    for(int i = 0; i < 2; i++)
+        puts(names[i]);
+
+    return 0;
+}
